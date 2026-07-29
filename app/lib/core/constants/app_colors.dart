@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 /// Designed for a premium dark neon glassmorphism vibe.
 abstract class AppColors {
   // Backgrounds
-  static const Color background = Color(0xFF07050E);
+  static const Color background = Color(0xFF000000);
   static const Color cardBackground = Color(0xFF0F0C1E);
   
   // Primary Purples & Accents

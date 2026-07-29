@@ -6,6 +6,8 @@ import '../../../../core/widgets/primary_button.dart';
 import '../../../../core/widgets/text_link_button.dart';
 import '../widgets/onboarding_content_section.dart';
 import '../widgets/onboarding_hero_image.dart';
+import 'onboarding_second_page.dart';
+
 
 /// The primary welcome screen for CapsuleX.
 class OnboardingPage extends StatefulWidget {
@@ -19,14 +21,13 @@ class _OnboardingPageState extends State<OnboardingPage> {
   final int _currentPageIndex = 0;
 
   void _onGetStartedPressed() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Get Started clicked! Ready for next screen.'),
-        backgroundColor: AppColors.primaryPurple,
-        duration: Duration(seconds: 2),
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => const OnboardingSecondPage(),
       ),
     );
   }
+
 
   void _onLogInPressed() {
     ScaffoldMessenger.of(context).showSnackBar(
